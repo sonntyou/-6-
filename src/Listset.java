@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Listset {
-	static ArrayList<Testdatacontents> list = new ArrayList<Testdatacontents>();
+	private ArrayList<Testdatacontents> list = new ArrayList<Testdatacontents>();
 
 	public void makecsvlist() {
 		try {
-			File csv = new File("C:\\Users\\levelfive\\Desktop\\Coffee.csv"); // CSVデータファイル
+			File csv = new File(
+					"C:\\Users\\levelfive\\Desktop\\CoffeeLunch.csv"); // CSVデータファイル
 
 			BufferedReader br = new BufferedReader(new FileReader(csv));
 
@@ -26,11 +27,14 @@ public class Listset {
 					// 1行の各要素をタブ区切りで表示
 					Testdatacontents testdatacontents = new Testdatacontents();
 					if (i == 0) {
+						System.out.println(st.nextToken());
 						i++;
+						continue;
 					}
 					if (i == 1) {
 						testdatacontents.setCoffee(Integer.parseInt(st
 								.nextToken()));
+						System.out.println((testdatacontents.getCoffee()));
 						i++;
 						continue;
 					}
@@ -61,7 +65,7 @@ public class Listset {
 
 	}
 
-	public ArrayList getcsvlist() {
+	public ArrayList<Testdatacontents> getcsvlist() {
 		return list;
 	};
 

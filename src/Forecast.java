@@ -7,9 +7,10 @@ public class Forecast {
 			double coffeeslope, double coffeeintercept, double lunchslope,
 			double lunchintercept) {
 		for (int i = 0; list.size() > i; i++) {
+			list.get(i).getCoffee();
 			// 予測値を生成
-			int coffeeforecast = (coffeeslope * (list(i).getcoffee) + coffeeintercept);
-			int lunchforecast = (lunchslope * (list(i).getlunch) + lunchintercept);
+			int coffeeforecast = (int) (coffeeslope * (list.get(i).getCoffee()) + coffeeintercept);
+			int lunchforecast = (int) (lunchslope * (list.get(i).getLunch()) + lunchintercept);
 			// 出来た予測値をTestdatacontentsインスタンスにセット
 			Testdatacontents testdatacontents = new Testdatacontents();
 			testdatacontents.setCoffee(coffeeforecast);
