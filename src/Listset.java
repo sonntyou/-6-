@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Listset {
 	static ArrayList<Testdatacontents> list = new ArrayList<Testdatacontents>();
 
-	public static void makecsvlist() {
+	public void makecsvlist() {
 		try {
 			File csv = new File("C:\\Users\\levelfive\\Desktop\\Coffee.csv"); // CSVデータファイル
 
